@@ -5,10 +5,24 @@ namespace CharactersApi.Models;
 /// </summary>
 public class SkillSet
 {
-    public string Passive { get; set; } = "";
-    public string Attack { get; set; } = "";
-    public string Normal { get; set; } = "";
-    public string Special { get; set; } = "";
-    public string Tag { get; set; } = "";
-    public string Ultimate { get; set; } = "";
+    public string PassiveName { get; set; } = "";
+    public string PassiveDescription { get; set; } = "";
+     public string PassiveStatusDescription { get; set; } = "";
+    public string AttackName { get; set; } = "";
+    public string AttackDescription { get; set; } = "";
+    public double CountdownSpecial {get; set;}
+    public string SpecialName { get; set; } = "";
+    public string SpecialDescription { get; set; } = "";
+    public string SpecialStatusDescription {get; set;} = "";
+    public double CountdownNormal {get; set;}
+    public string NormalName { get; set; } = "";
+    public string NormalDescription { get; set; } = "";
+    public string TagName { get; set; } = "";
+    public string TagDescription { get; set; } = "";
+    public string TagStatusDescription { get; set; } = "";
+    public double CountdownUltimate {get; set;}
+    public int UsageMagicUltimate {get; set;}
+    public string UltimateName { get; set; } = "";
+    public string UltimateDescription { get; set; } = "";
+    public string UltimateStatusDescription {get; set;} = "";
 }
