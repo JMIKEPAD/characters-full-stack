@@ -6,9 +6,20 @@ builder.Services.AddScoped<CharacterService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Servizi (qui più avanti aggiungeremo Swagger, DB ecc.)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors("AllowAngular");
 
 /// <summary>
 /// Tutti i personaggi

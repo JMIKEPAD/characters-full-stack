@@ -1,0 +1,11 @@
+<div class="characters-container">
+  @for(character of characters; track character.id) {
+  <div [class] = "character.rarity === 'SSR' ? 'character-card background-ssr':'character-card background-sr'" (click)="navigateToSelectedChar(character.id)" >
+    <img [src]="character.linkPortrait" [alt]="character.name">
+    <h2>
+      {{ character.name }}
+    </h2>
+  </div>
+  }
+
+</div>

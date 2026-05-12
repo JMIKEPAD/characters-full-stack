@@ -7,6 +7,7 @@ namespace CharactersApi.Models;
 public class Weapon
 {
     public string Name { get; set; } = "";
+    public string Element {get; set;} = "";
 
     public SkillSet Skills { get; set; } = new();
 }

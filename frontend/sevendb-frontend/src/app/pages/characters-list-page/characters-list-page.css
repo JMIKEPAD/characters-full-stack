@@ -1,0 +1,37 @@
+.characters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  background: #30220d;
+  min-height: 100vh;
+}
+
+.character-card {
+  background: #64461e;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.background-ssr{
+  background-image: url(https://sunderarmor.com/STARRAIL/Rarity/5_sm.png) !important;
+  background-size: contain !important;
+  background-position: 50% !important;
+  order: -1;
+}
+
+.background-sr{
+  background-image: url(https://sunderarmor.com/STARRAIL/Rarity/4_sm.png) !important;
+  background-size: contain !important;
+  background-position: 50% !important;
+  order: -1;
+}
