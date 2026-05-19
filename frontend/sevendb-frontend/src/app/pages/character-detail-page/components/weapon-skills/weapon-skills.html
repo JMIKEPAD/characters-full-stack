@@ -1,0 +1,25 @@
+<div class="skills-container">
+
+  <!-- ADVENTURE -->
+  <app-skill-panel
+    title="Adventure Skill"
+    [name]="character.adventureSkillName"
+    [description]="character.adventureSkillDescription">
+  </app-skill-panel>
+
+  <!-- PASSIVE -->
+  <app-skill-panel
+    title="Passive"
+    [name]="weapon.skills.passiveName"
+    [description]="weapon.skills.passiveDescription"
+    [extraDescription]="weapon.skills.passiveStatusDescription">
+  </app-skill-panel>
+
+  <!-- ATTACK -->
+  <app-skill-panel
+    title="Attack"
+    [name]="weapon.skills.attackName"
+    [description]="weapon.skills.attackDescription">
+  </app-skill-panel>
+
+</div>

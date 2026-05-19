@@ -1,1 +1,27 @@
-<p>character-detail-page works!</p>
+<a routerLink="'/characters'"><img src="./assets/icons/arrow_back.svg" alt=""></a>
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <app-character-sidebar
+    [character]="character">
+  </app-character-sidebar>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- WEAPON SELECTOR -->
+    <app-weapon-selector
+      [weapons]="character.weapons"
+      [selectedWeapon]="selectedWeapon"
+      (weaponSelected)="onWeaponSelected($event)">
+    </app-weapon-selector>
+
+    <!-- SKILLS -->
+    <app-weapon-skills
+      [character]="character"
+      [weapon]="selectedWeapon">
+    </app-weapon-skills>
+
+  </div>
+
+</div>

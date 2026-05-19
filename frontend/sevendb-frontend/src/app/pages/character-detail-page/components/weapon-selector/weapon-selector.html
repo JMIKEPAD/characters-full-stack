@@ -1,0 +1,14 @@
+<div class="weapon-selector">
+
+  @for (weapon of weapons; track weapon.name) {
+
+    <button
+      class="weapon-button"
+      [class.active]="weapon === selectedWeapon"
+      (click)="selectWeapon(weapon)"
+    >
+      {{ weapon.name }}
+    </button>
+  }
+
+</div>

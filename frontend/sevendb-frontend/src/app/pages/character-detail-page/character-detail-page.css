@@ -1,0 +1,131 @@
+.character-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #0f0f0f;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #151515;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 2px solid #444;
+}
+
+.hero-info {
+  flex: 1;
+}
+
+.top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 34px;
+  margin: 0;
+}
+
+.rarity {
+  background: gold;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* SECTION */
+.section {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-left: 4px solid #666;
+  padding-left: 10px;
+}
+
+/* WEAPON CARD */
+.weapon-card {
+  background: #181818;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.weapon-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.element {
+  font-size: 12px;
+  padding: 4px 8px;
+  background: #333;
+  border-radius: 8px;
+}
+
+/* SKILLS */
+.skill {
+  background: #202020;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.skill h4 {
+  margin: 0 0 6px 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.skill strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.skill p {
+  margin: 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.skill small {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* VARIANTS */
+.skill.highlight {
+  border-left: 4px solid orange;
+}
+
+.skill.tag {
+  border-left: 4px solid #4cafef;
+}
+
+.skill.ultimate {
+  border-left: 4px solid purple;
+  box-shadow: 0 0 12px rgba(128, 0, 128, 0.4);
+}

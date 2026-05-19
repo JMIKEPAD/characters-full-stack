@@ -1,0 +1,33 @@
+<aside class="sidebar">
+
+  <img
+    class="portrait"
+    [src]="character.linkPortrait"
+    [alt]="character.name"
+  />
+
+  <h1>
+    {{ character.name }}
+  </h1>
+
+  <div class="rarity">
+    {{ character.rarity }}
+  </div>
+
+  <div class="buttons">
+
+    <button>
+      Costumes
+    </button>
+
+    <button class="active">
+      Weapons
+    </button>
+
+    <button>
+      Info
+    </button>
+
+  </div>
+
+</aside>

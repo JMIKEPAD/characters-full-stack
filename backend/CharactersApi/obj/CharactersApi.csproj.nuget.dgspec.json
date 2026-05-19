@@ -48,6 +48,14 @@
               "target": "Package",
               "version": "[10.0.4, )"
             },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.8, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[10.1.7, )"

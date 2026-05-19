@@ -1,0 +1,30 @@
+<div class="panel">
+
+  <div
+    class="panel-header"
+    (click)="toggle()"
+  >
+    {{ title }}
+  </div>
+
+  @if (isOpen) {
+
+    <div class="panel-content">
+
+      <h3>{{ name }}</h3>
+
+      <p>{{ description }}</p>
+
+      @if (extraDescription) {
+
+        <small>
+          {{ extraDescription }}
+        </small>
+
+      }
+
+    </div>
+
+  }
+
+</div>
