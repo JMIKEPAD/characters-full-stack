@@ -1,4 +1,4 @@
-<div class="characters-container">
+<!-- <div class="characters-container">
   @for(character of characters; track character.id) {
   <div [class] = "character.rarity === 'SSR' ? 'character-card background-ssr':'character-card background-sr'" (click)="navigateToSelectedChar(character.id)" >
     <img [src]="character.linkPortrait" [alt]="character.name">
@@ -6,6 +6,38 @@
       {{ character.name }}
     </h2>
   </div>
+  }
+
+</div> -->
+
+<div class="character-grid">
+
+  @for (character of characters; track character.id; let i = $index) {
+
+    <div
+      class="character-card"
+      [class]="getRarityClass(character.rarity)"
+      (click)="navigateToSelectedChar(character.id)"
+      [style.animationDelay.ms]="i * 60"
+    >
+
+      <img
+        [src]="character.linkPortrait"
+        alt="{{ character.name }}"
+      />
+
+      <div class="info">
+
+        <h3>{{ character.name }}</h3>
+
+        <div class="rarity">
+          {{ character.rarity }}
+        </div>
+
+      </div>
+
+    </div>
+
   }
 
 </div>

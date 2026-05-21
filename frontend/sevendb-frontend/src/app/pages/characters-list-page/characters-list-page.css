@@ -1,37 +1,270 @@
-.characters-container {
+.character-grid {
+
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 16px;
-  padding: 24px;
-  background: #30220d;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(160px, 1fr));
+
+  gap: 12px;
+
+  padding: 16px;
+
+  background:
+    radial-gradient(circle at top, #23243a, #0b0d13);
+
   min-height: 100vh;
+
+
+  align-content: start; /* 🔥 QUESTO È IL FIX CHIAVE */
+  justify-content: start;
 }
 
 .character-card {
-  background: #64461e;
-  border-radius: 12px;
-  padding: 12px;
-  text-align: center;
-  color: white;
+  position: relative;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
   cursor: pointer;
-  height: fit-content;
+
+  transition: .2s;
+
+  background: rgba(255,255,255,.04);
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: auto;
+
+  aspect-ratio: 3 / 4;
+
+  opacity: 0;
+
+  transform:
+    translateY(18px)
+    scale(0.96);
+
+  animation:
+    cardReveal .45s ease forwards;
+
+  will-change: transform, opacity;
+
+  animation-timing-function:
+    cubic-bezier(.2,.9,.2,1);
+}
+
+.character-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(255,255,255,.2);
 }
 
 .character-card img {
+    width: 100%;
+    flex: 1;
+    object-fit: cover;
+    object-position: top;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    padding-top: 6px;
+}
+
+.info {
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+  padding: 10px 12px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.85),
+      transparent
+    );
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.info h3 {
+
+  font-size: 1rem;
+
+  margin: 0;
+
+  color: white;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.rarity{
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.character-card.ssr {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 215, 0, .18),
+      rgba(255, 140, 0, .10)
+    );
+
+  border:
+    1px solid rgba(255, 215, 0, .4);
+
+  box-shadow:
+    0 0 25px rgba(255, 215, 0, .15);
+
+  animation-delay: calc(var(--i) * 60ms + 200ms);
+
+}
+
+.character-card.sr {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(160, 80, 255, .16),
+      rgba(80, 120, 255, .10)
+    );
+
+  border:
+    1px solid rgba(160, 80, 255, .35);
+}
+
+.character-card.ssr .rarity {
+
+  background:
+    linear-gradient(135deg, #ffd700, #ff9a00);
+
+  color: #1a1a1a;
+}
+
+.character-card.sr .rarity {
+
+  background:
+    linear-gradient(135deg, #b46bff, #6a5cff);
+
+  color: white;
+}
+
+@media (max-width: 900px) {
+
+  .character-grid {
+
+    grid-template-columns:
+      repeat(auto-fit, minmax(130px, 1fr));
+
+  }
+
+  .character-card img {
+
   width: 100%;
-  border-radius: 8px;
+
+  height: 120px;
+
+  object-fit: contain;
+
+  object-position: top;
+
+  background: rgba(0,0,0,.25);
+
+  padding: 6px;
+}
 }
 
-.background-ssr{
-  background-image: url(https://sunderarmor.com/STARRAIL/Rarity/5_sm.png) !important;
-  background-size: contain !important;
-  background-position: 50% !important;
-  order: -1;
+@media (max-width: 600px) {
+
+  .character-grid {
+
+    grid-template-columns:
+      repeat(auto-fit, minmax(120px, 1fr));
+
+    gap: 10px;
+
+  }
+
+  .character-card {
+
+    height: 170px;
+
+  }
+
+  .character-card img {
+
+    height: 100px;
+
+  }
+
+  .character-card img {
+
+  width: 100%;
+
+  height: 120px;
+
+  object-fit: contain;
+
+  object-position: top;
+
+  background: rgba(0,0,0,.25);
+
+  padding: 6px;
+}
 }
 
-.background-sr{
-  background-image: url(https://sunderarmor.com/STARRAIL/Rarity/4_sm.png) !important;
-  background-size: contain !important;
-  background-position: 50% !important;
-  order: -1;
+@keyframes cardReveal {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateY(18px)
+      scale(0.96);
+
+    filter: blur(4px);
+
+  }
+
+  60% {
+
+    opacity: 1;
+
+    filter: blur(0px);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
 }

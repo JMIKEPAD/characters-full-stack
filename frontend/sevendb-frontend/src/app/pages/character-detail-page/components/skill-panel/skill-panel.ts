@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-skill-panel',
@@ -7,18 +7,16 @@ import { Component, Input } from '@angular/core';
   styleUrl: './skill-panel.css',
 })
 export class SkillPanel {
-  @Input() title!: string;
+@Input() title!: string;
 
-  @Input() name!: string;
+@Input() name!: string;
 
-  @Input() description!: string;
+@Input() description!: string;
 
-  @Input() extraDescription?: string;
+@Input() extraDescription?: string;
 
-  isOpen = false;
+@Input() opened = false;
 
-  toggle(): void {
-    this.isOpen = !this.isOpen;
-  }
+@Output() panelClick = new EventEmitter<void>();
 
 }

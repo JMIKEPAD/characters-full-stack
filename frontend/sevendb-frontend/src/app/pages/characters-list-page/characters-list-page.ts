@@ -29,4 +29,8 @@ export class CharactersListPage implements OnInit {
   public navigateToSelectedChar(id:number){
     this.route.navigate(['/characters/' + id]);
   }
+
+  public getRarityClass(rarity: string): string {
+    return rarity.toLowerCase();
+  }
 }

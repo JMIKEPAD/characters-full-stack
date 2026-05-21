@@ -31,6 +31,8 @@ export class CharacterDetailPage {
       this.characterService.getCharacterById(id)
         .subscribe((data: any) => {
           this.character = data;
+          console.log(this.character.weapons);
+          
           this.selectedWeapon = this.character.weapons[0];
           this.cd.detectChanges();
         });

@@ -1,4 +1,3 @@
-<a routerLink="'/characters'"><img src="./assets/icons/arrow_back.svg" alt=""></a>
 <div class="layout">
 
   <!-- SIDEBAR -->
@@ -10,11 +9,13 @@
   <div class="content">
 
     <!-- WEAPON SELECTOR -->
+     @if(character.weapons){
     <app-weapon-selector
       [weapons]="character.weapons"
       [selectedWeapon]="selectedWeapon"
       (weaponSelected)="onWeaponSelected($event)">
     </app-weapon-selector>
+  }
 
     <!-- SKILLS -->
     <app-weapon-skills

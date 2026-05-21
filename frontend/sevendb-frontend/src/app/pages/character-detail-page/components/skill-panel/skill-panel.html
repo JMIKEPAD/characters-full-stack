@@ -1,30 +1,46 @@
 <div class="panel">
 
-  <div
-    class="panel-header"
-    (click)="toggle()"
-  >
-    {{ title }}
-  </div>
+    <div
+        class="panel-header"
+        (click)="panelClick.emit()"
+    >
 
-  @if (isOpen) {
+        {{ title }}
 
-    <div class="panel-content">
+        <span>
 
-      <h3>{{ name }}</h3>
+            @if (opened) {
+                −
+            } @else {
+                +
+            }
 
-      <p>{{ description }}</p>
-
-      @if (extraDescription) {
-
-        <small>
-          {{ extraDescription }}
-        </small>
-
-      }
+        </span>
 
     </div>
 
-  }
+    @if (opened) {
+
+        <div class="panel-content">
+
+            <h3>
+                {{ name }}
+            </h3>
+
+            <p>
+                {{ description }}
+            </p>
+
+            @if (extraDescription) {
+
+                <small>
+                    {{ extraDescription }}
+                </small>
+
+            }
+
+        </div>
+
+    }
 
 </div>

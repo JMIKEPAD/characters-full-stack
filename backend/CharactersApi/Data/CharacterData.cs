@@ -109,8 +109,8 @@ public static class CharacterData
             Rarity = "SSR",
             LinkPortrait = "https://sunderarmor.com/7DSO/Live/portraits/slot_escanor_001.png",
             Name = "Escanor",
-            AdventureSkillName = "Acume del capitano",
-            AdventureSkillDescription = "Consente i salti doppi e di camminare sulle pareti",
+            AdventureSkillName = "Spaccatura nel tempo",
+            AdventureSkillDescription = "Con la distorsione spazio-temporale, le statistiche non subiscoino più l'influenza del tempo",
             Weapons =
             [
                 new Weapon
@@ -119,9 +119,9 @@ public static class CharacterData
                     Element = "Fuoco",
                     Skills = new SkillSet
                     {
-                        PassiveName = "Maestria della velocità",
-                        PassiveDescription = "Riduce la durata di esplosione di oscurità di 2 sec e infligge danni aggiuntivi pari al 200% dell'attacco mette a segno l'abilità normale su un nemico con esplosione di oscurità attiva",
-                        PassiveStatusDescription = "",
+                        PassiveName = "Deflagrazione solare",
+                        PassiveDescription = "Ottiene 1 accumulo/i di punto solare per 20s quando attacca un nemico senza bagliore o sole calante attivi",
+                        PassiveStatusDescription = "Punto solare: aumenta i danni fuoco di un 3% e i ps massimi di un 1.5% per ogni 1 accumulo/i. Quanbdo viene raggiunta la quantità massima di accumuli, rimuove punto solare e ottiene bagliore per 15s|Bagliore: rirpristina un 10% dei ps massimi la prima volta che viene concesso l'effetto. Aumenta i danni fuoco di un 50% e i ps massimi dell'eroe di un 25%, e riduce i danni subiti di un 20%. Ottieni sole calante per 10s quando bagliore viene rimosso.| Sole calante: riduce i ps massimi dell'eroe di un 25% mantenendo invariati i ps massimi",
                         AttackName = "Squarcio oscuro",
                         AttackDescription = "infligge danni pari al 160% dell'attacco, 1° hit: 24%, 2° hit: 26%, 3° hit: 42%, 4° hit: 68%",
                         CountdownSpecial = 17,

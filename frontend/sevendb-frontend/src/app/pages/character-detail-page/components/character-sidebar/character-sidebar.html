@@ -1,7 +1,12 @@
 <aside class="sidebar">
-
+<button
+    class="back-button"
+    (click)="goBack()"
+  >
+    ← Back
+  </button>
   <img
-    class="portrait"
+    [class]=" character.rarity === 'SSR' ? 'portrait background-ssr':'portrait background-sr'"
     [src]="character.linkPortrait"
     [alt]="character.name"
   />

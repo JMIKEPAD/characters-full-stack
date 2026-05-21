@@ -1,25 +1,77 @@
-<div class="skills-container">
+ <div class="skills-layout">
 
-  <!-- ADVENTURE -->
-  <app-skill-panel
-    title="Adventure Skill"
-    [name]="character.adventureSkillName"
-    [description]="character.adventureSkillDescription">
-  </app-skill-panel>
+  <!-- FIXED TOP -->
+  <div class="adventure-container">
 
-  <!-- PASSIVE -->
-  <app-skill-panel
-    title="Passive"
-    [name]="weapon.skills.passiveName"
-    [description]="weapon.skills.passiveDescription"
-    [extraDescription]="weapon.skills.passiveStatusDescription">
-  </app-skill-panel>
+    <span class="section-label">
+      Adventure Skill
+    </span>
 
-  <!-- ATTACK -->
-  <app-skill-panel
-    title="Attack"
-    [name]="weapon.skills.attackName"
-    [description]="weapon.skills.attackDescription">
-  </app-skill-panel>
+    <h2>
+      {{ character.adventureSkillName }}
+    </h2>
+
+    <p>
+      {{ character.adventureSkillDescription }}
+    </p>
+
+  </div>
+
+  <!-- SCROLL -->
+  <div class="skills-container">
+
+    <app-skill-panel
+      title="Passive"
+      [opened]="openedPanel === 'passive'"
+      (panelClick)="togglePanel('passive')"
+      [name]="weapon.skills.passiveName"
+      [description]="weapon.skills.passiveDescription"
+      [extraDescription]="weapon.skills.passiveStatusDescription">
+    </app-skill-panel>
+
+    <app-skill-panel
+      title="Attack"
+      [opened]="openedPanel === 'attack'"
+      (panelClick)="togglePanel('attack')"
+      [name]="weapon.skills.attackName"
+      [description]="weapon.skills.attackDescription">
+    </app-skill-panel>
+
+    <app-skill-panel
+      [title]="'Special · CD ' + weapon.skills.countdownSpecial + 's'"
+      [opened]="openedPanel === 'special'"
+      (panelClick)="togglePanel('special')"
+      [name]="weapon.skills.specialName"
+      [description]="weapon.skills.specialDescription"
+      [extraDescription]="weapon.skills.specialStatusDescription">
+    </app-skill-panel>
+
+    <app-skill-panel
+      [title]="'Normal · CD ' + weapon.skills.countdownNormal + 's'"
+      [opened]="openedPanel === 'normal'"
+      (panelClick)="togglePanel('normal')"
+      [name]="weapon.skills.normalName"
+      [description]="weapon.skills.normalDescription">
+    </app-skill-panel>
+
+    <app-skill-panel
+      title="Tag Skill"
+      [opened]="openedPanel === 'tag'"
+      (panelClick)="togglePanel('tag')"
+      [name]="weapon.skills.tagName"
+      [description]="weapon.skills.tagDescription"
+      [extraDescription]="weapon.skills.tagStatusDescription">
+    </app-skill-panel>
+
+    <app-skill-panel
+      [title]="'Ultimate · CD ' + weapon.skills.countdownUltimate + 's'"
+      [opened]="openedPanel === 'ultimate'"
+      (panelClick)="togglePanel('ultimate')"
+      [name]="weapon.skills.ultimateName"
+      [description]="weapon.skills.ultimateDescription"
+      [extraDescription]="weapon.skills.ultimateStatusDescription">
+    </app-skill-panel>
+
+  </div>
 
 </div>

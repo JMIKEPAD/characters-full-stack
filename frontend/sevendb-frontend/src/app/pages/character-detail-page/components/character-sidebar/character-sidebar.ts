@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Character } from '../../../../models/character.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-character-sidebar',
@@ -10,4 +11,9 @@ import { Character } from '../../../../models/character.model';
 export class CharacterSidebar {
   @Input() character!: Character;
 
+  constructor( private router: Router){}
+
+  goBack(): void {
+  this.router.navigate(['/']);
+}
 }

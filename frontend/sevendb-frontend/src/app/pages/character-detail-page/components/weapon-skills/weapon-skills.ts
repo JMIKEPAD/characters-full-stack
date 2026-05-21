@@ -12,4 +12,16 @@ import { SkillPanel } from '../skill-panel/skill-panel';
 export class WeaponSkills {
   @Input() character!: Character;
   @Input() weapon!: Weapon;
+
+  openedPanel = 'passive';
+
+togglePanel(panel: string): void {
+
+  if (this.openedPanel === panel) {
+    return;
+  }
+
+  this.openedPanel = panel;
+
+}
 }

@@ -1,0 +1,80 @@
+:host {
+
+    display: block;
+
+    color: inherit;
+
+}
+
+.panel {
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    color: inherit;
+
+}
+
+.panel-header {
+
+    padding: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+}
+
+.panel-header:hover {
+
+    background:
+        rgba(255,255,255,.04);
+
+}
+
+.panel-content {
+
+    padding:
+        0 22px 22px;
+
+    color:
+        rgba(255,255,255,.82);
+}
+
+.panel-content h3 {
+
+    margin-top: 0;
+
+    color: white;
+}
+
+.panel-content p {
+
+    color:
+        rgba(255,255,255,.72);
+
+    line-height: 1.8;
+}
+
+.panel-content small {
+
+    color:
+        rgba(255,255,255,.50);
+
+}

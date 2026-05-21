@@ -1,0 +1,89 @@
+:host {
+
+    display: flex;
+
+    flex: 1;
+
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+.skills-layout {
+
+    flex: 1;
+
+    min-height: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.adventure-container {
+
+    flex-shrink: 0;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(99,105,255,.15),
+            rgba(30,30,60,.3)
+        );
+    color: white;
+}
+
+.skills-container {
+
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding-right: 10px;
+}
+
+.skills-container::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+.skills-container::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(255,255,255,.08);
+
+    border-radius: 999px;
+
+}
+
+.skills-layout {
+
+    color: white;
+
+}
+
+.adventure-container p {
+
+    color:
+        rgba(255,255,255,.78);
+
+}
