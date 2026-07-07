@@ -10,6 +10,7 @@ public class SkillSet
      public string PassiveStatusDescription { get; set; } = "";
     public string AttackName { get; set; } = "";
     public string AttackDescription { get; set; } = "";
+    public string AttackStatusDescription { get; set; } = "";
     public double CountdownSpecial {get; set;}
     public string SpecialName { get; set; } = "";
     public string SpecialDescription { get; set; } = "";
@@ -17,6 +18,7 @@ public class SkillSet
     public double CountdownNormal {get; set;}
     public string NormalName { get; set; } = "";
     public string NormalDescription { get; set; } = "";
+    public string NormalStatusDescription { get; set; } = "";
     public string TagName { get; set; } = "";
     public string TagDescription { get; set; } = "";
     public string TagStatusDescription { get; set; } = "";

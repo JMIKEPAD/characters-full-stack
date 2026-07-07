@@ -11,7 +11,7 @@ import { Character } from '../models/character.model';
 export class CharacterService {
 
   // URL backend
-  private apiUrl = 'https://friendly-umbrella-6xvwjjrx5rx3656-5068.app.github.dev/characters';
+  private apiUrl = 'https://special-goggles-9g6wppqg465299q4-5068.app.github.dev/characters';
 
   constructor(private http: HttpClient) {}
 
