@@ -5,9 +5,10 @@ namespace CharactersApi.Models;
 /// </summary>
 public class SkillSet
 {
+    public double PassiveCountDOwn{ get; set; }
     public string PassiveName { get; set; } = "";
     public string PassiveDescription { get; set; } = "";
-     public string PassiveStatusDescription { get; set; } = "";
+    public string PassiveStatusDescription { get; set; } = "";
     public string AttackName { get; set; } = "";
     public string AttackDescription { get; set; } = "";
     public string AttackStatusDescription { get; set; } = "";
